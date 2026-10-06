@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sudani Fast Pool Checker</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">NETWORK ROUTE DIAGNOSTIC</div>
+      <h1>Sudani Fast Pool Checker</h1>
+      <p>Checks the Fast.com / Netflix CDN pool visible from your current connection.</p>
+    </div>
+    <button id="checkBtn">CHECK CONNECTION</button>
+  </header>
+
+  <section id="status" class="status">Ready.</section>
+
+  <section class="grid">
+    <article class="card">
+      <span>PUBLIC IP</span><strong id="ip">—</strong>
+    </article>
+    <article class="card">
+      <span>ISP</span><strong id="isp">—</strong>
+    </article>
+    <article class="card">
+      <span>CLIENT LOCATION</span><strong id="clientLoc">—</strong>
+    </article>
+    <article class="card">
+      <span>ASN</span><strong id="asn">—</strong>
+    </article>
+  </section>
+
+  <section class="hero">
+    <div class="hero-title">FAST / NETFLIX POOL</div>
+    <div id="poolState" class="pool unknown">NOT CHECKED</div>
+    <div id="poolDetail">Press CHECK CONNECTION.</div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Paris candidates</h2>
+      <span id="parisCount">0</span>
+    </div>
+    <div id="parisList" class="list empty">No results yet.</div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>All Fast.com targets</h2>
+      <span id="targetCount">0</span>
+    </div>
+    <div id="targetList" class="list empty">No results yet.</div>
+  </section>
+
+  <footer>
+    Endpoint: <code id="endpoint">https://api.fast.com/netflix/speedtest/v2</code>
+    <br>
+    This tool diagnoses the CDN pool; it does not change your APN, IP, route, VPN, or network settings.
+  </footer>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
