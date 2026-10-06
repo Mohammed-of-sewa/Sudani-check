@@ -1,0 +1,16 @@
+{
+  "name": "sudani-fast-pool-checker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fast.com/Netflix CDN pool checker for diagnosing ISP routing.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
